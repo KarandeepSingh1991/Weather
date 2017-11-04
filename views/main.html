@@ -1,0 +1,32 @@
+<h1>Weather Report</h1>
+<div class="main-agileits">
+	<div class="weather-agile">
+		<div class="weather-top-agileits-w3layouts">
+			<div class="weather-w3ls">
+				<img src="images/forecast.png" alt=" " />
+				<h5>Cloudy</h5>
+			</div>
+			<div class="weather-agileinfo">
+				<h4>{{weatherData}}</h4>
+				<h5>{{cityName}}</h5>
+			</div>
+			<div class="clear"></div>	
+		</div>
+		
+		<div class="search-w3">
+			<form  ng-submit="getWeatherDetails()">
+				<input type="submit" value=" " >
+				<input type="text" ng-init="cityName='Delhi'" name="Search" placeholder="Search" required="" ng-model="cityName">
+			</form>
+		</div>
+		<div class="scrollbar" id="style-2">
+			<ul ng-repeat="weather in forcastList">
+                <li>{{weather.day}} <span>{{weather.dateMonth}}</span><span>{{weather.time}}</span></li>
+				<li>{{weather.main.temp}}°C  <canvas id="clear-day" width="18" height="18"></canvas></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="footer-agileits-w3layouts">
+	<p class="agileinfo"> &copy; 2016 Multi Column Widget . All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+</div>
